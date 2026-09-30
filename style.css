@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #dedede;
+  color: #111;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin: 10px 0 20px;
+  font-size: 32px;
+}
+
+.intro {
+  max-width: 900px;
+  margin: 12px auto;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  z-index: 1000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  max-width: 1200px;
+  margin: 25px auto;
+}
+
+figure {
+  margin: 0;
+  padding: 12px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  text-align: center;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0 auto 10px;
+}
+
+figcaption {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  margin: 30px 0 10px;
+}
+
+footer a {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Media query 1: small tablets */
+@media screen and (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro {
+    font-size: 21px;
+  }
+}
+
+/* Media query 2: tablets */
+@media screen and (min-width: 772px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure img {
+    height: 200px;
+  }
+}
+
+/* Media query 3: laptops */
+@media screen and (min-width: 998px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  body {
+    padding: 30px;
+  }
+}
+
+/* Media query 4: large screens */
+@media screen and (min-width: 1200px) {
+  .grid {
+    gap: 22px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  figure img {
+    height: 220px;
+  }
+}
